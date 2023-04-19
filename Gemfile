@@ -9,7 +9,7 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.3"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-gem "sqlite3", "~> 1.4"
+
 gem "puma", "~> 5.0"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
@@ -45,12 +45,19 @@ gem 'devise', '~> 4.9', '>= 4.9.2'
 group :development, :test do
 
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  
 end
 
 group :development do
 
   gem "web-console"
+  gem "sqlite3", "~> 1.4"
 
+end
+
+group :production do  
+  gem 'pg', '~> 1.4', '>= 1.4.6'
+  
 end
 
 group :test do
