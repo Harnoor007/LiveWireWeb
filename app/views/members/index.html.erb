@@ -1,0 +1,29 @@
+
+
+<h1>Members</h1>
+</br>
+
+<table class="table table table-striped table table-hover table table-bordered" >
+  <thead" >
+    <tr class="table-dark">
+      <th>Name</th>
+      <th>Branch</th>
+      <th>URN</th>
+      <th>Role</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="members">
+    <% @members.each do |member| %>
+      <tr>
+        <td><%= member.name %></td>
+        <td><%= member.branch %></td>
+        <td><%= member.urn %></td>
+        <td><%= member.role %></td>
+        <td align="center"><%= link_to 'Options', member_path(member) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New member', new_member_path, class:"btn btn-dark" %>

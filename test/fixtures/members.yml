@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  branch: MyString
+  urn: 1
+  role: MyString
+
+two:
+  name: MyString
+  branch: MyString
+  urn: 1
+  role: MyString

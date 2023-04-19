@@ -1,0 +1,30 @@
+
+
+
+
+<div class="card" style="width: 80rem;" >
+<div class="card-header">
+<p>Member Details</p>
+</div>
+  <div align="center" class="card-body">
+    <h1 align="center" class="card-title"><%= @member.name %></h1>
+    <h2><%= @member.role %></h2>
+    <p class="card-text">
+    </br>
+    <%= @member.branch %> | 
+    <%= @member.urn %></br>
+    </br>
+    </p>
+
+    <%= link_to "Edit", edit_member_path(@member), class:"btn btn-dark" %> 
+  <%= link_to "Go  Back ", members_path, class:"btn btn-dark" %>
+  </br>
+  </br>
+  <%= button_to "Destroy Member", @member, method: :delete, class:"btn btn-dark" %>
+  </div>
+</div>
+
+
+
+
+
